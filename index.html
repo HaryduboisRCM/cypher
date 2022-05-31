@@ -1,10 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>The Cipher Of Pontifex Maximus Gaius Julius Caesar</title>
 </head>
 <body>
+    <div class="background"></div>
+
+
+    <div class="container-fluid">
+    <section id="title" class="title">
+   <div class="row">
+       <h2>The Cipher Of Gaius Julius Caesar</h2>
+   </div>   
+    </section>
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form name="caeserForm" id="ceaserForm">                 
+              <br>
+              <label for="userMessage">Enter Message:</label><br />
+              <textarea id="userMessage" rows="3" cols="40" oninput="enDeCode()">
+              </textarea>
+              <br>
+              <label for="encode">Encode Your Message:</label>
+              <input type="radio" name="code" id="encode" checked onchange="enDeCode()" />
+              <br>
+              <label for="userKey">Key:</label>
+              <input type="number" min="0" max="26" id="userKey" value="1" onchange="enDeCode()" />
+              <br>               
+              <br>
+              <br>
+              <br>
+              <br> 
+              </br>
+           </div>
+           <div class="col-md-6">
+            <label for="output">Output:</label><br />
+            <textarea id="output" rows="3" cols="40">
+            </textarea>
+            <br>
+            <label for="decode">Decode Your Message:</label>
+            <input type="radio" name="code" id="decode" onchange="enDeCode()" />       
+            <br>
+            <label for="shiftkey">Shift:</label>
+            <input type="number" min="0" max="5" id="shiftkey" value="1" onchange="enDeCode()" />
+            <br>       
+           </div>
+           </form>
+      </div>     
+
+
+
+    <!--
     <div class="page">
             <form name="caeserForm" id="ceaserForm">
                     <label for="userMessage">Enter Message:</label><br />
@@ -25,7 +84,10 @@
                     <textarea id="output" rows="3" cols="40">
                     </textarea>
             </form>
-    </div>
+    </div> -->
+
+</div>
+
     <script src="caesarcipher.js"></script>
   </body>
 </html>

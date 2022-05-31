@@ -1,0 +1,11 @@
+body{
+background-image:url(statue.jpg);
+background-size: contain;
+}
+
+
+.title{
+text-align: center;
+font-family:'Cinzel', serif;
+font-size: 28px;
+}
